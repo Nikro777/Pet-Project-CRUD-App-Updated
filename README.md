@@ -60,7 +60,7 @@ GET /low-stock?threshold=... - товары с низким запасом
 
 GET /filter/price?min=...&max=... - фильтр по цене
 
-POST / - создать товар
+POST /create - создать товар
 
 PUT /{id} - обновить товар
 
@@ -83,7 +83,7 @@ GET /search?name=... - поиск
 
 GET /place/{place} - по месту склада
 
-POST / - создать
+POST /create - создать
 
 PUT /{id} - обновить
 
