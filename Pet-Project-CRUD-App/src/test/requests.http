@@ -1,0 +1,42 @@
+### ========== НОВАЯ МОДЕЛЬ (/api/products) ==========
+
+### 1. Список всех продуктов
+GET http://localhost:8080/api/products/list
+
+### 2. Продукты по категории
+GET http://localhost:8080/api/products/category/Подгузники
+
+### 3. Поиск по названию
+GET http://localhost:8080/api/products/search?name=For_Day
+
+### 4. Продукты на месте склада
+GET http://localhost:8080/api/products/place/1
+
+### 5. Низкие запасы
+GET http://localhost:8080/api/products/low-stock?threshold=1000
+
+### 6. Фильтр по цене
+GET http://localhost:8080/api/products/filter/price?min=100&max=500
+
+### 7. Создать продукт
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "productName": "Новый продукт из IDEA",
+  "productPrice": 299.99,
+  "quantity": 100,
+  "categoryName": "Тестовая",
+  "warehousePlace": 2
+}
+
+### 8. Увеличить количество
+PUT http://localhost:8080/api/products/1/increase?amount=20
+
+### ========== СТАРАЯ МОДЕЛЬ (/api/warehouse) ==========
+
+### 9. Все товары (старая модель)
+GET http://localhost:8080/api/warehouse
+
+### 10. Поиск в старой модели
+GET http://localhost:8080/api/warehouse/search?name=Model
